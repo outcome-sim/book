@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Addresses and variables - The Outcome Project Book</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css"> -->
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- <center><img src="../..//assets/logo3.png" width="140" height="140" /></center> -->
+            <!-- <center><b>Outcome Documentation</b></center> -->
+            <!-- <center><img src="assets/logo-docs.png" width="200" /></center> -->
+            <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Preface</a></li><li class="chapter-item expanded "><a href="../../content/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="../../content/project-overview.html"><strong aria-hidden="true">2.</strong> Project Overview</a></li><li class="chapter-item expanded "><a href="../../content/getting-started/getting-started.html"><strong aria-hidden="true">3.</strong> Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../content/getting-started/installation.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../../content/getting-started/running-an-example.html"><strong aria-hidden="true">3.2.</strong> Running an example</a></li></ol></li><li class="chapter-item expanded "><a href="../../content/concepts/basic-concepts.html"><strong aria-hidden="true">4.</strong> Basic concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../content/concepts/entity-component.html"><strong aria-hidden="true">4.1.</strong> Entities and components</a></li><li class="chapter-item expanded "><a href="../../content/concepts/address-variable.html" class="active"><strong aria-hidden="true">4.2.</strong> Addresses and variables</a></li><li class="chapter-item expanded "><a href="../../content/concepts/logic-processor.html"><strong aria-hidden="true">4.3.</strong> Embedded logic processor</a></li><li class="chapter-item expanded "><a href="../../content/concepts/model.html"><strong aria-hidden="true">4.4.</strong> Simulation model</a></li><li class="chapter-item expanded "><a href="../../content/concepts/scenario-module.html"><strong aria-hidden="true">4.5.</strong> Scenarios and modules</a></li><li class="chapter-item expanded "><a href="../../content/concepts/services.html"><strong aria-hidden="true">4.6.</strong> Services and data querying</a></li><li class="chapter-item expanded "><a href="../../content/concepts/persistence.html"><strong aria-hidden="true">4.7.</strong> Persistence and snapshots</a></li><li class="chapter-item expanded "><a href="../../content/concepts/load-balancing.html"><strong aria-hidden="true">4.8.</strong> Load balancing</a></li></ol></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">The Outcome Project Book</h1>
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#addresses-and-variables" id="addresses-and-variables">Addresses and variables</a></h1>
+<p>All the data that exists within the scope of a simulation is organized into <em>variables</em>, which are referenced using <em>addresses</em>.</p>
+<p>Since variables don't exist in a regular global state, and are instead stored on the level of individual entities, and are also organized around components, address format includes all that additional information.</p>
+<h2><a class="header" href="#different-types-of-variables" id="different-types-of-variables">Different types of variables</a></h2>
+<p>Working with variables we use the notion of <em>variable types</em> that specify the kinds of data stored by specific variables. For example variable of type <code>int</code> stores an integer number, while variable of type <code>str_list</code> stores a list of character strings.</p>
+<p>Current implementation of the engine supports 4 basic variable types: <code>str</code>, <code>int</code>, <code>float</code> and <code>bool</code>, along with list and grid types for each of those: <code>str_list</code>, <code>int_list</code>, <code>float_list</code>, <code>bool_list</code>, <code>str_grid</code>, <code>int_grid</code>, <code>float_grid</code>, <code>bool_grid</code>. Basic variable types may be expanded in the future to include different sizes for numeric variables, e.g. <code>float128</code>, <code>uint8</code>.</p>
+<h2><a class="header" href="#address-as-a-unique-reference" id="address-as-a-unique-reference">Address as a unique reference</a></h2>
+<p>Addresses are used for referencing variables. Any full address is a unique reference to a specific variable stored within the scope of a simulation instance. This is an important feature in a distributed setting — we don't really need to know on which node the variable is currently stored, as long as we know the address we will be able to access it.</p>
+<p>Each address is made up of three distinct parts, referencing respectively: entity, component and variable. Each of those three parts can be further broken down into two smaller chunks, broadly defined as <em>type</em> and <em>id</em>, though as we will learn later this means slightly different things for each of the parts.</p>
+<p>Here is an example of a full address:</p>
+<pre><code>:monster:m03:property:health:int:main
+</code></pre>
+<p>The same address but with a more visual breakdown into the three different parts:</p>
+<pre><code>:[monster:m03]:[property:health]:[int:main]
+</code></pre>
+<p>So the the above address references some integer named <code>main</code>, existing as part of component of type <code>property</code> named <code>health</code>, which is attached to entity of type <code>monster</code> named <code>m03</code>.</p>
+<h2><a class="header" href="#address-and-execution-scope" id="address-and-execution-scope">Address and execution scope</a></h2>
+<p>Since the <em>embedded interpreter</em>, which we will learn more about in later chapters, executes logic within certain <em>scopes</em>, we need to be able to use scope-aware addresses.</p>
+<p>When executing logic within the scope of some component, which itself exists within the scope of a certain entity, the engine will automatically use that scope to properly handle our &quot;local addresses&quot;.</p>
+<p>Let's use the address from the previous paragraph as an example. Imagine we were defining some logic to be executed on a <code>property:health</code> component. No matter what kind of logic we're dealing with (don't worry, we will dive into all that in a later section) we wouldn't want to include specific entity reference, since our component could be attached to other <code>monster</code> type entities — it has to remain <em>&quot;entity instance agnostic&quot;</em>, so to speak.</p>
+<p>Writing our logic we would refer to the variable simply as <code>int:main</code>, or alternatively <code>property:health:int:main</code>. The latter could also be used to access that same variable from another component attached to the same monster entity.</p>
+<h2><a class="header" href="#address-as-signature-and-match-pattern" id="address-as-signature-and-match-pattern">Address as signature and &quot;match pattern&quot;</a></h2>
+<p>Sometimes we will need to reference things like component types. For that we shall use certain combinations of the different address parts. These combinations are not usable as variable references. We call those <em>signatures</em>.</p>
+<p>Again, following the earlier monster health example, signature of a <code>property</code> component type looks like this:</p>
+<pre><code>:monster:*:property:*
+</code></pre>
+<p>First of all, as you can see we use a <code>*</code> star symbol to signalize a <em>wildcard</em>, or in other words — an <em>unknown</em>. Since component types have to be bound to specific entity types, the signature specifies an entity type, but omits specifying</p>
+<p>of all, we always include both chunks of a single address part. That's why we include the</p>
+<p>Based on the above it's not hard to imagine how we shall form a signature of an entity type:</p>
+<pre><code>:monster:*
+</code></pre>
+<p>Notion of <em>wildcards</em>, or <em>unknowns</em>, is also used for simple pattern matching. Querying a simulation instance for health of all monsters we could simply use:</p>
+<pre><code>:monster:*:property:health:int:main
+</code></pre>
+<p>On the level of the engine library, this is called <em>expanding</em> the address. <em>Expanding</em> the above pattern simply means creating a collection of matching addresses, like so:</p>
+<pre><code>:monster:m02:property:health:int:main
+:monster:m03:property:health:int:main
+:monster:big_m01:property:health:int:main
+</code></pre>
+<h2><a class="header" href="#dynamic-address-using-part-substitution" id="dynamic-address-using-part-substitution">Dynamic address using part substitution</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../content/concepts/entity-component.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../content/concepts/logic-processor.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../content/concepts/entity-component.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../content/concepts/logic-processor.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

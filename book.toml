@@ -1,0 +1,14 @@
+[book]
+authors = ["Adam Adamsky"]
+multilingual = false
+src = "src"
+title = "The Outcome Project Book"
+
+[output.html]
+theme = "src/theme"
+default-theme = "coal"
+mdbook-theme = "coal"
+
+[build]
+build-dir = "docs"
+create-missing = false
