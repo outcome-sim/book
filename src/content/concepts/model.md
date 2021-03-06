@@ -5,12 +5,18 @@ At the heart of any simulation there usually lies some form of a [model](https:/
 In our case the model not only provides the initial layout of entities, components, events, etc., but is also read, and mutated, at runtime.
 
 
-
 ## Assembling the model
 
-Main approach championed by the engine is one focused on *incremental assembly*, meaning building up the model through the process of executing commands on already existing components.
+One approach championed by the engine is *incremental assembly*, meaning building up the model at runtime. This can be done either by using the engine's built-in logic processor, or by feeding commands remotely through a client connection.
 
-*Incremental assembly* is not the only way. One can also define the model in a more static fashion, for example using `yaml` or `json` structured data files.
+Another more classic approach is to define the model in a static fashion, for example using `yaml` or `json` structured data files. 
+
+
+## Service processes as part of the model
+
+Service processes that will be working on the simulation data through the client interface can also be considered part of the model. As such, it's good practice for services to be provided as open source, even if their internals are closed source and the service itself is only a wrapper with basic client functionality.
+
+When including a totally "black-box" service binary, make sure that documentation is available on how it operates and how it's meant to interact with the engine.
 
 
 ## Components' logic models

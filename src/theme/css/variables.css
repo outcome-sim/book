@@ -56,7 +56,7 @@
     --sidebar-bg: #262626;
     --sidebar-fg: #b7b7b7;
     --sidebar-non-existant: #505254;
-    --sidebar-active: #3473ad;
+    --sidebar-active: #68bdea;
     --sidebar-spacer: #393939;
 
     --scrollbar: var(--sidebar-fg);
@@ -64,7 +64,7 @@
     --icons: #43484d;
     --icons-hover: #b3c0cc;
 
-    --links: #2b79a2;
+    --links: #68bdea;
 
     --inline-code-color: #c5c8c6;;
 

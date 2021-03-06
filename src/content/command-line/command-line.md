@@ -1,8 +1,6 @@
 # Working with the command line
 
-We've already seen some of the command line interface exposed by `outcome` CLI tooling. In the past few chapters we've used commands like `new` and `run`. We never got to explore them in more detail though. That's what we will focus on in this chapter. We will also introduce new functionality we haven't used in this book before.
-
-We will go through the available commands and document some of the lesser known commands and options available.
+We've already seen some of what `outcome` CLI tooling can do for us. In the past few chapters we've used commands like `new` and `run`. We never got to explore them in more detail though. That's what we will focus on in this chapter. We will also introduce some totally new and exciting functionality.
 
 ## When in doubt, use `--help`
 

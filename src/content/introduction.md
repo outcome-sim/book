@@ -1,4 +1,4 @@
-# Introduction to the project
+# Introduction
 
 This page serves as a quick introduction to the project. It's written in a form of a list of answers to some of the frequently asked questions.
 
@@ -14,27 +14,30 @@ At a more basic level it's also about discovering a good minimal simulation arch
 
 Currently there are not that many projects aiming at making distributed simulations for games and science easier and more accessible.
 
-One commercial project that exists in this space, which is actually using a similar underlying design approach, is [*SpatialOS*](https://documentation.improbable.io/spatialos-overview/docs). That said, they are still very much a *black box* company with no interest in sharing their technology with the community.
+Two commercial projects I'm aware of that exist in this space are [SpatialOS](https://documentation.improbable.io/spatialos-overview/docs) and [Aether Engine](https://hadean.com/spatial-simulation/). Both of them focus primarily on *spatial* simulations, meaning simulating entities existing in 2D or 3D space, with things like load distribution being based on position of entities in the world.
 
+`outcome` is meant to be flexible, meaning it will support spatial simulation but also be able to handle non-spatial contexts just as well.
 
 ## How useful is it right now?
 
-Right now the project consists of a proposed system for how collaborative simulation-modeling could happen, as well as experimental software implementing things that are necessary for this to happen.
+Right now a collection of experimental software is available, with some of the planned functionality already implemented.
 
-If you're ready to build from source (Rust programming language) you can already run some of the software.
+Try running some of the [example scenarios](https://github.com/outcome-sim/outcome/tree/master/examples/simulation/) and follow the [getting started](getting-started/getting-started.html) guide to see what sort of features are available so far.
 
-See [project overview](project-overview.md) for more information about the , and [the project status page](https://theoutcomeproject.com/status/) to learn more about what's being actively worked on right now.
+See [project overview](project-overview.md) and [the status page](https://theoutcomeproject.com/status/) to learn more about different *pieces of the puzzle* that are being worked on and updates on the latest progress.
 
 
 ## Can I make a multiplayer game with this?
 
 Yes. Once the software gets mature enough and provides a stable API you will be able to create all sorts of interactive experiences with it.
 
-The main *selling point* in terms of using `outcome` to create multiplayer experiences, is the possibility for creating very large game worlds with hundreds, even thousands, of concurrently connected players.
+The main *selling point* of `outcome`, in terms of using it for creating multiplayer experiences, is the possibility for creating very large game worlds with hundreds, even thousands, of concurrently connected players.
 
 ## Can I do science with this?
 
-Sure. This project may become quite useful for studying complex emergent systems. As it grows it will probably become more and more useful for researchers. It's still not there yet though. 
+Sure. This project may become quite useful for studying complex emergent systems. As it grows it will probably become more and more useful for researchers. It's still not there yet though.
+
+You're more than welcome to chime in and help drive the project in a more science-friendly direction!
 
 
 ## What does "reusing other people's models" mean?

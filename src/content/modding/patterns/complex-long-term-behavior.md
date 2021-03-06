@@ -1,1 +1,0 @@
-# Complex long-term behavior

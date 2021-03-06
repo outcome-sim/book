@@ -1,5 +1,5 @@
 [book]
-authors = ["Adam Adamsky"]
+authors = ["adamsky"]
 multilingual = false
 src = "src"
 title = "The Outcome Project Book"
@@ -8,6 +8,7 @@ title = "The Outcome Project Book"
 theme = "src/theme"
 default-theme = "coal"
 mdbook-theme = "coal"
+cname = "book.theoutcomeproject.com"
 
 [build]
 build-dir = "docs"

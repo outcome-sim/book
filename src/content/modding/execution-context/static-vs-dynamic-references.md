@@ -1,1 +1,0 @@
-# Static vs dynamic references
